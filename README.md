@@ -8,7 +8,7 @@
 $ pip install randomfactory
 ```
 
-randomfactory supports Python 3.11 and newer.
+randomfactory supports Python 3.8 and newer.
 
 ## Usage
 
