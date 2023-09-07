@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "randomfactory"
-version = "1.0.6"
+version = "1.0.7"
 description = ""
 authors = ["chavokim <treeboy0384@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 
 
 [build-system]
