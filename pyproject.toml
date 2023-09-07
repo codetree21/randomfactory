@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "randomfactory"
-version = "0.1.0"
+version = "1.0.1"
 description = ""
 authors = ["chavokim <treeboy0384@gmail.com>"]
 readme = "README.md"
@@ -12,3 +12,8 @@ python = "^3.11"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+test = "randomfactory.test:main"
+
