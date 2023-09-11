@@ -65,7 +65,7 @@ class TestRandomFactory(unittest.TestCase):
             self.assertTrue(
                 arr.index(test_arr[i]) > arr.index(test_arr[i - 1])
             )
-        
+
 
 if __name__ == '__main__':
     unittest.main()
