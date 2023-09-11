@@ -9,7 +9,9 @@ homepage = "https://github.com/codetree21/randomfactory"
 repository = "https://github.com/codetree21/randomfactory"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
+flake8 = "^6.1.0"
+mypy = "^1.5.1"
 
 
 [build-system]
