@@ -1,0 +1,45 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: name-tests-test
+    -   id: requirements-txt-fixer
+-   repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+    -   id: black
+        exclude: ^tests/
+        args: ['--line-length=79']
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+    -   id: flake8
+        additional_dependencies: [
+            'flake8-blind-except',
+            'flake8-docstrings',
+            'flake8-bugbear',
+            'flake8-comprehensions',
+            'flake8-implicit-str-concat',
+            'pydocstyle>=5.0.0',
+        ]
+        exclude: ^tests/
+        args: ['--ignore=D100,D102,D103,D104,D105,D106,D107,D202,E501,W503']
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.5.1
+    hooks:
+    -   id: mypy
+        additional_dependencies: [tokenize-rt==5.2.0, types-requests]
+        exclude: ^tests/
+        args: [
+            --python-version=3.10,
+            --ignore-missing-imports,
+            --disallow-any-unimported,
+            --no-implicit-optional,
+            --check-untyped-defs,
+            --warn-return-any,
+            --warn-unused-ignores,
+            --show-error-codes,
+        ]
